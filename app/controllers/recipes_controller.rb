@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :require_login
 
   def index
-    @recipes = current_user.recipes.order_by(:id)
+    @recipes = current_user.recipes.order(:id)
   end
 
   def show
